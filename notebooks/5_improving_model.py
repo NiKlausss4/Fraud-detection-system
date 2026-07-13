@@ -53,3 +53,11 @@ print(confusion_matrix(y_test, y_pred))
 
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
+
+# saving the model
+
+import joblib
+joblib.dump(model, "models/fraud_model.pkl")
+joblib.dump(scaler, "models/scaler.pkl")
+
+print("Model and scaler saved successfully!")
